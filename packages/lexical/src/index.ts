@@ -52,6 +52,22 @@ export {
   SELECTION_CHANGE_COMMAND,
   UNDO_COMMAND,
 } from './LexicalCommands';
+export type {
+  CommandListenerPriority,
+  CommandPayloadType,
+  EditableListener,
+  EditorConfig,
+  EditorThemeClasses,
+  IntentionallyMarkedAsDirtyElement,
+  Klass,
+  LexicalCommand,
+  LexicalEditor,
+  MutationListener,
+  NodeMutation,
+  Proxies,
+  SerializedEditor,
+  Spread,
+} from './LexicalEditor';
 export {
   COMMAND_PRIORITY_CRITICAL,
   COMMAND_PRIORITY_EDITOR,
@@ -129,6 +145,10 @@ export {
 } from './LexicalUtils';
 export {VERSION} from './LexicalVersion';
 export {$isDecoratorNode, DecoratorNode} from './nodes/LexicalDecoratorNode';
+export type {
+  ElementFormatType,
+  SerializedElementNode,
+} from './nodes/LexicalElementNode';
 export {$isElementNode, ElementNode} from './nodes/LexicalElementNode';
 export type {
   ElementFormatType,
