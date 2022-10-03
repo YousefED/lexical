@@ -2544,7 +2544,7 @@
    let siblingKey = null;
    let offset = 0;
    let type: 'text' | 'element' | null = null;
-   if (prevSibling !== null) {
+   if (prevSibling !== null && prevSibling.getType() !== "childgroup") {
      siblingKey = prevSibling.__key;
      if ($isTextNode(prevSibling)) {
        offset = prevSibling.getTextContentSize();
@@ -2554,7 +2554,7 @@
        type = 'element';
      }
    } else {
-     if (nextSibling !== null) {
+     if (nextSibling !== null && nextSibling.getType() !== "childgroup") {
        siblingKey = nextSibling.__key;
        if ($isTextNode(nextSibling)) {
          type = 'text';
