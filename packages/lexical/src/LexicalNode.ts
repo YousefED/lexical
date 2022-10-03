@@ -667,6 +667,10 @@ export class LexicalNode {
     dom.textContent = '';
   }
 
+  getFirstChildDOM(dom: HTMLElement) {
+    return dom.firstChild;
+  }
+
   exportDOM(editor: LexicalEditor): DOMExportOutput {
     const element = this.createDOM(editor._config, editor);
     return {element};
