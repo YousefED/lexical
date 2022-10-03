@@ -667,6 +667,9 @@ export class LexicalNode {
     dom.textContent = '';
   }
 
+  /**
+   * TODO
+   */
   getFirstChildDOM(dom: HTMLElement) {
     return dom.firstChild;
   }

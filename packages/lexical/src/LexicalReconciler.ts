@@ -643,7 +643,6 @@ function reconcileDecorator(key: NodeKey, decorator: unknown): void {
   pendingDecorators[key] = decorator;
 }
 
-
 function getNextSibling(element: HTMLElement): Node | null {
   return element.nextSibling;
 }
