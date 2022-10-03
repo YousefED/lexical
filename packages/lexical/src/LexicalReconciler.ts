@@ -6,7 +6,7 @@
  *
  */
 
-import type {
+ import type {
   EditorConfig,
   IntentionallyMarkedAsDirtyElement,
   LexicalEditor,
@@ -291,10 +291,14 @@ function reconcileElementTerminatingLineBreak(
   const prevLineBreak =
     prevChildren !== null &&
     (prevChildren.length === 0 ||
+      (prevChildren.length === 1 &&
+        activePrevNodeMap.get(prevChildren[0])!.getType() === 'childgroup') ||
       isLastChildLineBreakOrDecorator(prevChildren, activePrevNodeMap));
   const nextLineBreak =
     nextChildren !== null &&
     (nextChildren.length === 0 ||
+      (nextChildren.length === 1 &&
+        activeNextNodeMap.get(nextChildren[0])!.getType() === 'childgroup') ||
       isLastChildLineBreakOrDecorator(nextChildren, activeNextNodeMap));
 
   if (prevLineBreak) {
